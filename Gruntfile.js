@@ -1,20 +1,15 @@
 'use strict';
 module.exports = function (grunt) {
 
-    // Load grunt tasks automatically
-    require('load-grunt-tasks')(grunt);
-    // Show grunt task time
-    require('time-grunt')(grunt);
+    require('load-grunt-tasks')(grunt);     // Load tasks automatically
+    require('time-grunt')(grunt);           // Grunt task time
 
     var appConfig = {
         app: 'app',
         dist: 'dist'
     };
 
-    // Grunt configuration
     grunt.initConfig({
-
-        // Project settings
         calendarTM: appConfig,
 
         // inject bower depedencies in index.html
@@ -57,7 +52,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-        // less compilation
         less: {
             development: {
                 options: {
@@ -69,7 +63,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-        
         // watch task that tracks changes
         watch: {
             styles: {
@@ -129,27 +122,22 @@ module.exports = function (grunt) {
                         cwd: '<%= calendarTM.app %>',
                         dest: '<%= calendarTM.dist %>',
                         src: [
-                            '*.{ico,png,txt}',
-                            '.htaccess',
                             '*.html',
                             'views/{,*/}*.html',
-                            'styles/patterns/*.*',
-                            'img/{,*/}*.*',
-                            '*.json'
                         ]
                     },
                     {
                         expand: true,
                         dot: true,
-                        cwd: 'bower_components/fontawesome',
-                        src: ['fonts/*.*'],
+                        cwd: 'bower_components/font-awesome',
+                        src: ['styles/*.*'],
                         dest: '<%= calendarTM.dist %>'
                     },
                     {
                         expand: true,
                         dot: true,
                         cwd: 'bower_components/bootstrap',
-                        src: ['fonts/*.*'],
+                        src: ['styles/*.*'],
                         dest: '<%= calendarTM.dist %>'
                     }
                 ]
@@ -167,7 +155,6 @@ module.exports = function (grunt) {
                 src: [
                     '<%= calendarTM.dist %>/scripts/{,*/}*.js',
                     '<%= calendarTM.dist %>/styles/{,*/}*.css',
-                    '<%= calendarTM.dist %>/styles/fonts/*'
                 ]
             }
         },

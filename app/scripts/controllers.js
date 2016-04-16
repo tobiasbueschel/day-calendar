@@ -71,7 +71,6 @@ app.controller('MainCtrl', function($scope, $state, $window, $timeout){
 
 
         for (var i = 0; i < events.length; i++){
-            console.log(events[i]);
             totalCollissions = 0;
             rightCollissions = 0;
             events[i].width = 0;
@@ -101,9 +100,4 @@ app.controller('MainCtrl', function($scope, $state, $window, $timeout){
     
     // expose the renderDay function to the browser window
     $window.renderDay = renderDay;
-
-    // $timeout(function() {
-    //
-    // });
-
 });

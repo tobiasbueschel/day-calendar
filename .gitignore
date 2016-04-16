@@ -1,4 +1,6 @@
-bower_components
 .tmp
+.idea
+bower_components
 node_modules
 dist
+firebase.json
