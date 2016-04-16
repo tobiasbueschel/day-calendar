@@ -7,14 +7,14 @@ Try out the [demo :computer:](https://calendartm.firebaseapp.com/)
 
 ### Instructions
 You can interact with the calendar and pass an array of JavaScript objects on the console using the renderDay() function
-`
+```javascript
 renderDay([
     { 
         start: 200,
         end:   270
      }
  ]);
-`
+```
 
 ### Installation Instructions
 *If you are new to GitHub, you can find a quick tutorial [here](http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1).*
