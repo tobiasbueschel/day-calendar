@@ -1,6 +1,6 @@
-.tmp
-.idea
-app/bower_components
-node_modules
-dist
+.tmp/
+.idea/
+app/bower_components/
+node_modules/
+dist/
 firebase.json
