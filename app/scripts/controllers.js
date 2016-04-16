@@ -1,4 +1,4 @@
-app.controller('MainCtrl', function($scope, $state, $window, $timeout){
+app.controller('MainCtrl', function($scope, $state, $window){
 
     $scope.currentDate = Date.now();
     $scope.times = [
@@ -17,11 +17,15 @@ app.controller('MainCtrl', function($scope, $state, $window, $timeout){
     // array of JavaScript Objects that contains the start and end. The numbers are minutes since 9am. (so 30 is 9:30am, 120 is 11am)
     var events = [
         {
+            start: 20,
+            end: 60
+        },
+        {
             start: 150,
             end: 220
         },
         {
-            start: 180,
+            start: 140,
             end: 220
         },
         {
@@ -29,16 +33,16 @@ app.controller('MainCtrl', function($scope, $state, $window, $timeout){
             end: 230
         },
         {
-            start: 150,
-            end: 220
+            start: 330,
+            end: 460
         },
         {
-            start: 180,
-            end: 220
+            start: 300,
+            end: 400
         },
         {
-            start: 180,
-            end: 230
+            start: 480,
+            end: 500
         }
     ];
 
@@ -92,12 +96,27 @@ app.controller('MainCtrl', function($scope, $state, $window, $timeout){
             events[i].level = rightCollissions / totalCollissions * 100;
         }
         $scope.events = events;
-        $scope.$apply();
+        $scope.safeApply();
+
     };
 
+    // Helper function that checks the current phase before executing your function.
+    // source: https://coderwall.com/p/ngisma/safe-apply-in-angular-js
+    $scope.safeApply = function(fn) {
+        var phase = this.$root.$$phase;
+        if(phase == '$apply' || phase == '$digest') {
+            if(fn && (typeof(fn) === 'function')) {
+                fn();
+            }
+        } else {
+            this.$apply(fn);
+        }
+    };
+    
     // call the renderDay function when the app starts
     renderDay(events);
     
     // expose the renderDay function to the browser window
     $window.renderDay = renderDay;
+
 });

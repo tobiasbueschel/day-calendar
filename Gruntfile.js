@@ -123,7 +123,7 @@ module.exports = function (grunt) {
                         dest: '<%= calendarTM.dist %>',
                         src: [
                             '*.html',
-                            'views/{,*/}*.html',
+                            'views/{,*/}*.html'
                         ]
                     },
                     {
@@ -154,7 +154,7 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     '<%= calendarTM.dist %>/scripts/{,*/}*.js',
-                    '<%= calendarTM.dist %>/styles/{,*/}*.css',
+                    '<%= calendarTM.dist %>/styles/{,*/}*.css'
                 ]
             }
         },
@@ -188,6 +188,7 @@ module.exports = function (grunt) {
 
     // Run live version of app
     grunt.registerTask('dev', [
+        'inject',
         'clean:server',
         'copy:styles',
         'connect:livereload',
@@ -204,6 +205,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('build', [
+        'inject',
         'clean:dist',
         'less',
         'useminPrepare',

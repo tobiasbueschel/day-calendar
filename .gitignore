@@ -1,6 +1,6 @@
 .tmp
 .idea
-bower_components
+app/bower_components
 node_modules
 dist
 firebase.json
