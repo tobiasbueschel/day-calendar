@@ -3,4 +3,5 @@
 app/bower_components/
 node_modules/
 dist/
+firebase-debug.log
 firebase.json
