@@ -1,0 +1,20 @@
+<div class="row m-t-sm">
+    <div class="col-xs-2 col-sm-1 m-t-lg p-l-none">
+        <div class="calendar-times">
+            <div class="times" ng-repeat="t in times">{{t}}</div>
+        </div>
+    </div>
+
+    <div class="col-xs-10 col-sm-10 m-t-lg p-l-none p-r-none">
+        <div class="calendar">
+
+            <div ng-repeat="t in times" style="height: 60px;">
+                <hr class="m-b-none m-t-none" style="color: black;">
+            </div>
+
+            <div class="event" ng-repeat="e in events" style="top:{{e.start}}px; width:{{ 1 / e.width * 100}}%; left:{{ e.level === 100 ? 0 : e.level }}%; height:{{e.end - e.start}}px;" title="Hooray!">
+                <small class="event-description">{{ e.startDate | date: 'shortTime' }} to {{ e.endDate | date: 'shortTime' }}</small>
+            </div>
+        </div>
+    </div>
+</div>
