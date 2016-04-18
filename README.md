@@ -1,4 +1,6 @@
-# Day Calendar [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
+# Day Calendar
+[![Dependency Status](https://gemnasium.com/badges/github.com/tobiasbueschel/coin-changer.svg)](https://gemnasium.com/github.com/tobiasbueschel/coin-changer)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
 
 Try out the [demo :computer:](https://calendartm.firebaseapp.com/)
 
