@@ -2,7 +2,14 @@
 
 Try out the [demo :computer:](https://calendartm.firebaseapp.com/)
 
-This app renders a series of events on a single day calendar. It takes in an array of JavaScript Objects that contains the start and end so: `[{start: 30, end: 120}, {start: 300, end: 330}, {start: 290, end: 330}]`
+This app renders a series of events on a single day calendar. It takes in an array of JavaScript Objects that contains the start and end so: 
+```javascript
+[
+    {start: 30, end: 120},
+    {start: 300, end: 330},
+    {start: 290, end: 330}
+]
+```
 The numbers are minutes since 9am. (so 30 is 9:30 am, 120 is 11am etc.). Only the working day from 9am to 6pm is shown.
 
 ### User Interface :calendar:
