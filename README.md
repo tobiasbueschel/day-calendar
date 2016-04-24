@@ -4,7 +4,7 @@
 
 Try out the [demo :computer:](https://calendartm.firebaseapp.com/)
 
-This app renders a series of events on a single day calendar. It takes in an array of JavaScript Objects that contains the start and end so: 
+This app renders a series of events on a single day calendar. It takes an array of JavaScript Objects that contains the start and end time of the event: 
 ```javascript
 [
     {start: 30, end: 120},
