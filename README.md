@@ -12,7 +12,7 @@ This app renders a series of events on a single day calendar. It takes an array 
     {start: 290, end: 330}
 ]
 ```
-The numbers are minutes since 9am. (so 30 is 9:30 am, 120 is 11am etc.). Only the working day from 9am to 6pm is shown.
+The numbers are minutes since 9am (so 30 is 9:30 am, 120 is 11am etc.). Only the working day from 9am to 6pm is shown.
 
 ### User Interface :calendar:
 ![screenshot](https://github.com/tobiasbueschel/day-calendar/blob/master/ui.png)
