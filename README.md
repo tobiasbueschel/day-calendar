@@ -1,10 +1,9 @@
 # Day Calendar
-[![Dependency Status](https://gemnasium.com/badges/github.com/tobiasbueschel/coin-changer.svg)](https://gemnasium.com/github.com/tobiasbueschel/coin-changer)
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
 
 Try out the [demo :computer:](https://calendartm.firebaseapp.com/)
 
-This app renders a series of events on a single day calendar. It takes an array of JavaScript Objects that contains the start and end time of the event: 
+This app renders a series of events on a single day calendar. It takes an array of JavaScript Objects that contains the start and end time of the event:
 ```javascript
 [
     {start: 30, end: 120},
@@ -54,13 +53,13 @@ The project uses the JavaScript Task Runner [Grunt](http://gruntjs.com/). The fo
 + `grunt prod` runs the production version of the app
 + `grunt inject` _injects bower components into index.html_
 
-###Contributing
+### Contributing
 Feel free to send a pull request. If you find any bugs please report it on the [issue page](https://github.com/tobiasbueschel/day-calendar/issues).
 
-###References & Technology used 
+### References & Technology used 
 + [AngularJS](https://angularjs.org/)
 + [Bower](http://bower.io/)
 + [Grunt](http://gruntjs.com/)
 
-###License
+### License
 See the [MIT license](https://github.com/tobiasbueschel/day-calendar/blob/master/LICENSE).
