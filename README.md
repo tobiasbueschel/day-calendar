@@ -4,6 +4,7 @@
 Try out the [demo :computer:](https://calendartm.firebaseapp.com/)
 
 This app renders a series of events on a single day calendar. It takes an array of JavaScript Objects that contains the start and end time of the event:
+
 ```javascript
 [
     {start: 30, end: 120},
@@ -11,13 +12,17 @@ This app renders a series of events on a single day calendar. It takes an array 
     {start: 290, end: 330}
 ]
 ```
+
 The numbers are minutes since 9am (so 30 is 9:30 am, 120 is 11am etc.). Only the working day from 9am to 6pm is shown.
 
 ### User Interface :calendar:
+
 ![screenshot](https://github.com/tobiasbueschel/day-calendar/blob/master/ui.png)
 
 ### Instructions
+
 You can interact with the calendar and pass an array of JavaScript objects on the console using the renderDay() function
+
 ```javascript
 renderDay([
     { 
@@ -31,19 +36,22 @@ renderDay([
 *If you are new to GitHub, you can find a quick tutorial [here](http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1).*
 
 ###### (1) Download repository & open it
-```
-$ git clone https://github.com/tobiasbueschel/day-calendar.git
-$ cd day-calendar
+
+```shell
+git clone https://github.com/tobiasbueschel/day-calendar.git
+cd day-calendar
 ```
 
 ###### (2) Install node modules
-```
-$ sudo npm install
+
+```shell
+sudo npm install
 ```
 
 ###### (3) Install bower components
-```
-$ bower install
+
+```shell
+bower install
 ```
 
 ###### (4) Running the application and making changes
@@ -62,4 +70,4 @@ Feel free to send a pull request. If you find any bugs please report it on the [
 + [Grunt](http://gruntjs.com/)
 
 ### License
-See the [MIT license](https://github.com/tobiasbueschel/day-calendar/blob/master/LICENSE).
+See the [MIT license](/LICENSE).
